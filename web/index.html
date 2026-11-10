@@ -1,0 +1,113 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Concert Ticket - Đặt vé ca nhạc</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container nav">
+            <h1 class="logo">CONCERT<span>TICKET</span></h1>
+
+            <nav>
+                <a href="#home">Trang chủ</a>
+                <a href="#events">Sự kiện</a>
+                <a href="#cart">Giỏ hàng</a>
+                <a href="#orders">Đơn hàng của tôi</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <p class="subtitle">ÂM NHẠC - KẾT NỐI - ĐỈNH CAO</p>
+            <h2>TRẢI NGHIỆM ÂM NHẠC TUYỆT VỜI</h2>
+            <p>
+                Khám phá các sự kiện âm nhạc và đặt vé yêu thích
+                của bạn ngay hôm nay.
+            </p>
+            <a href="#events" class="hero-button">KHÁM PHÁ SỰ KIỆN</a>
+        </div>
+    </section>
+
+    <main class="container">
+
+        <section class="events-section" id="events">
+            <div class="section-heading">
+                <div>
+                    <p class="subtitle">SỰ KIỆN NỔI BẬT</p>
+                    <h2>VÉ CA NHẠC</h2>
+                </div>
+                <span id="event-count">0 sự kiện</span>
+            </div>
+
+            <div class="filter-bar">
+                <input
+                    type="text"
+                    id="search-input"
+                    placeholder="Tìm kiếm tên chương trình..."
+                >
+
+                <select id="price-filter">
+                    <option value="all">Tất cả mức giá</option>
+                    <option value="low">Dưới 500.000 VNĐ</option>
+                    <option value="medium">500.000 - 1.000.000 VNĐ</option>
+                    <option value="high">Trên 1.000.000 VNĐ</option>
+                </select>
+            </div>
+
+            <div class="event-grid" id="product-list"></div>
+        </section>
+
+        <section class="cart-section" id="cart">
+            <div class="section-heading">
+                <div>
+                    <p class="subtitle">GIỎ HÀNG CỦA BẠN</p>
+                    <h2>VÉ ĐÃ CHỌN</h2>
+                </div>
+            </div>
+
+            <div id="cart-list">
+                <p class="empty-cart">Giỏ hàng đang trống.</p>
+            </div>
+
+            <div class="cart-total">
+                <span>Tổng thanh toán:</span>
+                <strong id="cart-total">0 VNĐ</strong>
+            </div>
+
+            <button id="checkout-button" class="checkout-button">
+                TIẾN HÀNH ĐẶT VÉ
+            </button>
+        </section>
+
+        <section class="orders-section" id="orders">
+            <div class="section-heading">
+                <div>
+                    <p class="subtitle">QUẢN LÝ GIAO DỊCH</p>
+                    <h2>LỊCH SỬ ĐƠN HÀNG</h2>
+                </div>
+            </div>
+
+            <div id="order-list">
+                <p class="empty-cart">Bạn chưa có đơn hàng nào.</p>
+            </div>
+
+            <div id="order-detail" class="order-detail"></div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <h2>CONCERT TICKET</h2>
+        <p>Hệ thống bán vé ca nhạc Mini E-Commerce Core</p>
+        <p>© 2026 Mini Concert Ticket</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
